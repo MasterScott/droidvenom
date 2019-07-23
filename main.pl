@@ -2,11 +2,11 @@ use v5.10;
 use strict;
 use warnings;
 use experimental 'smartmatch';
-use File::Copy;
-use File::Path;
-use Term::ANSIColor;
+use File::Copy qw(copy);
+use File::Path qw(rmtree);
+use Term::ANSIColor qw(color colored);
 
-my $VERSION='0.0.3';
+my $VERSION='0.0.4';
 
 my $IP='0.0.0.0:80';
 my $name='Application';
