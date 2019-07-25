@@ -24,6 +24,7 @@
 ## Content
 
 - [Content](#content)
+- [Features](#features)
 - [Installation](#installation)
   - [Debian/Ubuntu](#apt)
   - [Arch Linux/Manjaro](#pacman)
@@ -34,6 +35,15 @@
 - [Authors](#authors)
 - [Contact](#contact)
 - [License](#license)
+
+## Features
+
+* Custom IP address and port.
+* Custom name and icon for generated application.
+* Custom payload.
+* Custom permissions.
+* Custom features.
+* Custom key file.
 
 ## Installation
 

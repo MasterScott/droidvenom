@@ -1,7 +1,9 @@
 *
 !.gitignore
+!features.txt
 !CHANGELOG.md
 !LICENSE
 !main.pl
+!permissions.txt
 !README.md
 !VERSION

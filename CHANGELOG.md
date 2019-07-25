@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.5] - 2019-07-25
+
+### Added
+
+- `features.txt` and `permissions.txt` files.
+
+##### [.gitignore](.gitignore)
+
+- `features.txt` and `permissions.txt` files.
+
+##### [README.md](README.md)
+
+- `Features` section.
+
 ## [1.0.4] - 2019-07-23
 
 ### Added
