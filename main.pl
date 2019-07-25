@@ -6,7 +6,7 @@ use File::Copy qw(copy);
 use File::Path qw(rmtree);
 use Term::ANSIColor qw(color colored);
 
-my $VERSION='1.0.6';
+my $VERSION='1.0.7';
 
 my $IP='0.0.0.0:80';
 my $name='Application';
@@ -21,7 +21,7 @@ my $key_file_path='my-release-key.keystore';
 
 sub get_arg{
 	my $arg=shift @ARGV;
-	if(!$arg||$arg=~/^-{1,2}.+/){die colored "[-] Wrong number of arguments for \"$_\".\nExpected $_[1].\nGot ".($_[0]-1).".\n",'red'}
+	if(not defined $arg||$arg=~/^-{1,2}.+/){die colored "[-] Wrong number of arguments for \"$_\".\nExpected $_[1].\nGot ".($_[0]-1).".\n",'red'}
 	return $arg;
 }
 do{
