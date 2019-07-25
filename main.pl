@@ -6,7 +6,7 @@ use File::Copy qw(copy);
 use File::Path qw(rmtree);
 use Term::ANSIColor qw(color colored);
 
-my $VERSION='1.0.5';
+my $VERSION='1.0.6';
 
 my $IP='0.0.0.0:80';
 my $name='Application';
@@ -21,7 +21,7 @@ my $key_file_path='my-release-key.keystore';
 
 sub get_arg{
 	my $arg=shift @ARGV;
-	if(!$arg||$arg=~/^-{1,2}/){die "Wrong number of arguments for \"$_\".\nExpected $_[1].\nGot ".($_[0]-1).".\n"}
+	if(!$arg||$arg=~/^-{1,2}.+/){die colored "[-] Wrong number of arguments for \"$_\".\nExpected $_[1].\nGot ".($_[0]-1).".\n",'red'}
 	return $arg;
 }
 do{
@@ -59,7 +59,7 @@ do{
 			print "  -s, --sigalg ALGORITHM\n            set name of signature algorithm\n";
 			print "  -d, --digestalg ALGORITHM\n            set name of digest algorithm\n";
 			print "  -k, --key FILE\n            set path to file with key\n";
-			if(not $_~~['-h','--help']){die colored "Invalid option \"$_\".\n",'red'}
+			if(not $_~~['-h','--help']){die colored "[-] Invalid option \"$_\".\n",'red'}
 			print color 'reset';
 			exit;
 		}
@@ -132,7 +132,7 @@ close $features_file or die colored "[-] Can't close \"$features_file_path\": $!
 print colored "[+] Successfully closed \"$features_file_path\"\n",'green';
 print colored "[+] Successfully wrote everything else to \"$app_directory/AndroidManifest.xml\"\n",'green';
 print colored "[+] Closing \"$app_directory/AndroidManifest.xml\"\n",'green';
-close $manifest_file or die colored "Can't close \"$app_directory/AndroidManifest.xml\": $!.\n",'red';
+close $manifest_file or die colored "[-] Can't close \"$app_directory/AndroidManifest.xml\": $!.\n",'red';
 print colored "[+] Successfully closed \"$app_directory/AndroidManifest.xml\"\n",'green';
 print colored "[+] Opening \"$app_directory/res/values/strings.xml\"\n",'green';
 open my $values_file,'>',"$app_directory/res/values/strings.xml" or die colored "[-] Can't open \"$app_directory/res/values/strings.xml\" for writing: $!.\n",'red';
