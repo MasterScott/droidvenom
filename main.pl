@@ -6,7 +6,7 @@ use File::Copy qw(copy);
 use File::Path qw(rmtree);
 use Term::ANSIColor qw(color colored);
 
-my $VERSION='1.0.8';
+my $VERSION='1.0.9';
 
 my $IP='0.0.0.0:80';
 my $name='Application';
