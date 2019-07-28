@@ -81,20 +81,20 @@ git clone "https://github.com/DeBos99/droidvenom.git"
 
 ### Optional arguments
 
-| Argument                    | Description                                                        | Default value                   |
-| :-------------------------- | :----------------------------------------------------------------- | :------------------------------ |
-| -h<br>--help                | Shows help message and exits.                                      |                                 |
-| -v<br>--version             | Shows version and exits.                                           |                                 |
-| -i<br>--ip IP               | Sets custom IP address to **IP**.                                  | 0.0.0.0:80                      |
-| -n<br>--name NAME           | Sets custom name for application and output file name to **NAME**. | Application                     |
-| -o<br>--output FILE         | Sets custom output file name to **FILE**.                          | application.apk                 |
-| -p<br>--payload PAYLOAD     | Sets custom payload to **PAYLOAD**.                                | android/meterpreter/reverse_tcp |
-| -P<br>--permissions FILE    | Sets path to file with permissions to **FILE**.                    | permissions.txt                 |
-| -F<br>--features FILE       | Sets path to file with features to **FILE**.                       | features.txt                    |
-| -I<br>--icons PATH          | Sets path to directory with icons to **PATH**.                     |                                 |
-| -k<br>--key FILE            | Sets path to file with key.                                        | my-release-key.keystore         |
-| -s<br>--sigalg ALGORITHM    | Sets name of signature algorithm to **ALGORITHM**.                 | SHA1withRSA                     |
-| -d<br>--digestalg ALGORITHM | Sets name of digest algorithm to **ALGORITHM**.                    | SHA1                            |
+| Argument                  | Description                                | Default value                   |
+| :------------------------ | :----------------------------------------- | :------------------------------ |
+| -h, --help                | Shows help message and exits.              |                                 |
+| -v, --version             | Shows version and exits.                   |                                 |
+| -i, --ip IP               | Sets IP address.                           | 0.0.0.0:80                      |
+| -n, --name NAME           | Sets application name and output filename. | Application                     |
+| -o, --output PATH         | Sets path to output file.                  | application.apk                 |
+| -p, --payload PAYLOAD     | Sets payload.                              | android/meterpreter/reverse_tcp |
+| -P, --permissions PATH    | Sets path to file with permissions.        | permissions.txt                 |
+| -F, --features PATH       | Sets path to file with features.           | features.txt                    |
+| -I, --icons PATH          | Sets path to directory with icons.         |                                 |
+| -s, --sigalg ALGORITHM    | Sets name of signature algorithm.          | SHA1withRSA                     |
+| -d, --digestalg ALGORITHM | Sets name of digest algorithm.             | SHA1                            |
+| -k, --key PATH            | Sets path to file with key.                | my-release-key.keystore         |
 
 ## Disclaimer
 

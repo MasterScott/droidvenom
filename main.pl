@@ -6,7 +6,7 @@ use File::Copy qw(copy);
 use File::Path qw(rmtree);
 use Term::ANSIColor qw(color colored);
 
-my $VERSION='1.0.7';
+my $VERSION='1.0.8';
 
 my $IP='0.0.0.0:80';
 my $name='Application';
@@ -46,19 +46,19 @@ do{
 		when(['-k','--key']){$key_file_path=get_arg(1,1)}
 		default{
 			print color 'blue';
-			print "usage: perl main.pl [-h] [-v] [-i IP] [-n NAME] [-o FILE] [-p PAYLOAD] [-P FILE] [-F FILE] [-I PATH] [-s ALGORITHM] [-d ALGORITHM] [-k FILE]\n";
-			print "  -h, --help            show this help message and exit\n";
+			print "usage: perl main.pl [-h] [-v] [-i IP] [-n NAME] [-o PATH] [-p PAYLOAD] [-P PATH] [-F PATH] [-I PATH] [-s ALGORITHM] [-d ALGORITHM] [-k PATH]\n";
+			print "  -h, --help            show help message and exit\n";
 			print "  -v, --version            show version and exit\n";
-			print "  -i, --ip IP\n            set custom IP address\n";
-			print "  -n, --name NAME\n            set custom name for application and output file name\n";
-			print "  -o, --output FILE\n            set custom output file name\n";
-			print "  -p, --payload PAYLOAD\n            set custom payload\n";
-			print "  -P, --permissions FILE\n            set path to file with permissions\n";
-			print "  -F, --features FILE\n            set path to file with features\n";
+			print "  -i, --ip IP\n            set IP address\n";
+			print "  -n, --name NAME\n            set application name and output filename\n";
+			print "  -o, --output PATH\n            set path to output file\n";
+			print "  -p, --payload PAYLOAD\n            set payload\n";
+			print "  -P, --permissions PATH\n            set path to file with permissions\n";
+			print "  -F, --features PATH\n            set path to file with features\n";
 			print "  -I, --icons PATH\n            set path to directory with icons\n";
 			print "  -s, --sigalg ALGORITHM\n            set name of signature algorithm\n";
 			print "  -d, --digestalg ALGORITHM\n            set name of digest algorithm\n";
-			print "  -k, --key FILE\n            set path to file with key\n";
+			print "  -k, --key PATH\n            set path to file with key\n";
 			if(not $_~~['-h','--help']){die colored "[-] Invalid option \"$_\".\n",'red'}
 			print color 'reset';
 			exit;
